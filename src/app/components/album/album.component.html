@@ -1,0 +1,26 @@
+<div *ngIf="showInfo" class="card m-5" style="width: 18rem">
+  <img
+    [src]="
+      albumSelected.images.length
+        ? albumSelected.images[0].url
+        : 'assets/img-not-found.png'
+    "
+    class="card-img-top"
+    alt="..."
+  />
+  <div class="card-body">
+    <h5 class="card-title">{{ albumSelected.name }}</h5>
+    <p class="card-text">{{ albumSelected.label }}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Tipo: {{ albumSelected.album_type }}</li>
+    <li class="list-group-item">Tracks: {{ albumSelected.total_tracks }}</li>
+    <li class="list-group-item">
+      Lanzamiento: {{ albumSelected.release_date }}
+    </li>
+  </ul>
+  <div class="card-body">
+    <a routerLink="/home" class="card-link">Home</a>
+    <a routerLink="/search" class="card-link">Buscar</a>
+  </div>
+</div>

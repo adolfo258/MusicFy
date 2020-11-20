@@ -1,10 +1,14 @@
 <div class="row row-cols-1 row-cols-md-3">
   <div class="col mb-4" *ngFor="let item of newRealeses">
-    <div class="card">
-      <img [src]="item.images[0].url" class="card-img-top" alt="...">
+    <div class="card" (click)="showArtist(item)" style="cursor: pointer">
+      <img [src]="item.images[0].url" class="card-img-top" alt="..." />
       <div class="card-body">
-        <h5 class="card-title">{{item.name}}</h5>
-        <span class="badge badge-dark p-2 m-1" *ngFor="let artist of item.artists">{{artist.name}}</span>
+        <h5 class="card-title">{{ item.name }}</h5>
+        <span
+          class="badge badge-dark p-2 m-1"
+          *ngFor="let artist of item.artists"
+          >{{ artist.name }}</span
+        >
       </div>
     </div>
   </div>

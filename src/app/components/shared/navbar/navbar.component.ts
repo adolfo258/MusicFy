@@ -14,6 +14,6 @@ export class NavbarComponent implements OnInit {
   setToken(): void {
     this.spotifyService
       .setToken()
-      .subscribe((response) => console.log('token seteado correctamente'));
+      .subscribe((response) => alert('token Actualizado correctamente'));
   }
 }

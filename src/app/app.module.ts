@@ -8,6 +8,8 @@ import { ArtistComponent } from './components/artist/artist.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { CardInfoComponent } from './components/shared/card-info/card-info.component';
+import { AlbumComponent } from './components/album/album.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     SearchComponent,
     ArtistComponent,
     NavbarComponent,
+    CardInfoComponent,
+    AlbumComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

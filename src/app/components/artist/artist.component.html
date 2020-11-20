@@ -1,1 +1,27 @@
-<p>artist works!</p>
+<div *ngIf="showInfo" class="card m-5" style="width: 18rem">
+  <img
+    [src]="
+      artistSelected.images.length
+        ? artistSelected.images[0].url
+        : 'assets/img-not-found.png'
+    "
+    class="card-img-top"
+    alt="..."
+  />
+  <div class="card-body">
+    <h5 class="card-title">{{ artistSelected.name }}</h5>
+    <p class="card-text">
+      {{ artistSelected.genres.join(" - ") }}
+    </p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Popularity: {{ artistSelected.popularity }}</li>
+    <li class="list-group-item">
+      Followers: {{ artistSelected.followers.total | number }}
+    </li>
+  </ul>
+  <div class="card-body">
+    <a routerLink="/home" class="card-link">Home</a>
+    <a routerLink="/search" class="card-link">Search</a>
+  </div>
+</div>

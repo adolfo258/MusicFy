@@ -19,6 +19,26 @@ export class SpotifyService {
     });
   }
 
+  getArtist(id) {
+    const token = localStorage.getItem('Authorization');
+    const headers = new HttpHeaders({
+      Authorization: token,
+    });
+    return this.http.get(`https://api.spotify.com/v1/artists/${id}`, {
+      headers,
+    });
+  }
+
+  getAlbum(id) {
+    const token = localStorage.getItem('Authorization');
+    const headers = new HttpHeaders({
+      Authorization: token,
+    });
+    return this.http.get(`https://api.spotify.com/v1/albums/${id}`, {
+      headers,
+    });
+  }
+
   search(value): Observable<any> {
     const token = localStorage.getItem('Authorization');
     const headers = new HttpHeaders({
