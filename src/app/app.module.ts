@@ -7,7 +7,7 @@ import { SearchComponent } from './components/search/search.component';
 import { ArtistComponent } from './components/artist/artist.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { AppRoutingModule } from './app-routing.module';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,14 +15,10 @@ import {HttpClientModule} from '@angular/common/http';
     HomeComponent,
     SearchComponent,
     ArtistComponent,
-    NavbarComponent
+    NavbarComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -9,7 +9,7 @@ import {SpotifyService} from '../../services/spotify.service';
 export class HomeComponent implements OnInit {
 
   newRealeses = [];
-
+  token: string;
 
   constructor(private spotifyService: SpotifyService) {
     spotifyService.getNewRealeases().subscribe(
@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
         console.log(response);
         this.newRealeses = response.albums.items;
       }
-    ) ;
+    );
   }
 
   ngOnInit(): void {
